@@ -35,3 +35,11 @@ arr.forEach(function(num) {
 
 console.log(sum / arr.length);
 
+function getAverageOfArray(nums){
+  let total = 0;
+  nums.forEach(function (num) {
+    total += num;
+  });
+  return (total / nums.length);
+}
+console.log(getAverageOfArray(arr));
