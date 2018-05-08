@@ -64,6 +64,22 @@ const result = steps.filter(step => !(step[0] < 0 || step[1] < 0));
 
 let stepCount = steps.map(step => (Math.abs(step[0]) + Math.abs(step[1])));
 
-console.log(result);
-console.log(stepCount);
-steps.forEach(step => console.log((Math.abs(step[0]) + Math.abs(step[1]))));
+// console.log(result);
+// console.log(stepCount);
+// steps.forEach(step => console.log((Math.abs(step[0]) + Math.abs(step[1]))));
+
+let input = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest';
+let arr = input.split(' ');
+let initialValue = '';
+
+let decode = function(accumulator, word) {
+  if (word.length === 3) {
+  return accumulator + ' ';
+} else {
+  return accumulator + word[word.length-1].toUpperCase();
+}
+}
+
+let finalWord = arr.reduce(decode, initialValue);
+
+console.log(finalWord);
