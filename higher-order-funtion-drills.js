@@ -53,7 +53,17 @@ const rocksWarning = hazardWarningCreator('Rocks on the Road');
 const floodWarning = hazardWarningCreator('Watch for flash flooding');
 const fireWarning = hazardWarningCreator('Fire!');
 
-rocksWarning('Loganberry Dr');
-floodWarning('your house');
-fireWarning('the roof');
-fireWarning('Main St.');
+// rocksWarning('Loganberry Dr');
+// floodWarning('your house');
+// fireWarning('the roof');
+// fireWarning('Main St.');
+
+let steps = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+
+const result = steps.filter(step => !(step[0] < 0 || step[1] < 0));
+
+let stepCount = steps.map(step => (Math.abs(step[0]) + Math.abs(step[1])));
+
+console.log(result);
+console.log(stepCount);
+steps.forEach(step => console.log((Math.abs(step[0]) + Math.abs(step[1]))));
