@@ -27,3 +27,11 @@ function max(numbers) {
 const arr = [1, 25, 63, 13, 100];
 console.log(min(arr));
 console.log(max(arr));
+
+let sum = 0;
+arr.forEach(function(num) {
+  sum += num;
+});
+
+console.log(sum / arr.length);
+
